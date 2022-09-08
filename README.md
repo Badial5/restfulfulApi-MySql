@@ -9,13 +9,4 @@ Create a simple subscription platform(only RESTful APIs with MySQL) in which use
 5. Open your `.env` and configure your database credentials.
 6. Run `php artisan migrate --seed`
 
-## Documentation
-https://documenter.getpostman.com/view/7154640/UVC6j71T
 
-## Queue
-The post notification to subscribers are queued, so you will need to run `php artisan queue:listen`
-
-## Bonus
-There is a command to send "post-created" emails to subscribers: `php artisan notify:subscribers`.
-
-I did not add this implementation by default since the mails will be sent upon the post creation via event/listener (observer), but if you do want to test it, simply run the command.
